@@ -33,3 +33,4 @@ D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cach
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\ref\WebApi.dll
 D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\RestSharp.dll
 D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json

@@ -11,6 +11,27 @@ public class CurrenciesController : ControllerBase
     {
         _restClient = new RestClient();
     }
+
+    [HttpGet("exchange")]
+    public IActionResult GetExchangeRate(string baseCurrency = "USD", string targetCurrency = "EUR")
+    {
+        var client = new RestClient($"https://api.collectapi.com/economy/exchange?int=10&to={targetCurrency}&base={baseCurrency}");
+        var request = new RestRequest();
+        request.AddHeader("authorization", "apikey 3hRPpifkKwiSm7hwI2vODH:5PmwOCIoBlPrntlXrYfUot");
+        request.AddHeader("content-type", "application/json");
+        
+        RestResponse response = client.Execute(request);
+
+        if (response.IsSuccessful)
+        {
+            return Ok(response.Content);
+        }
+        else
+        {
+            return StatusCode(500, "Veriler alınamadı.");
+        }
+    }
+
     [HttpGet]
     public IActionResult GetLatestExchangeRates(string baseCurrency = "USD")
     {
@@ -31,6 +52,26 @@ public class CurrenciesController : ControllerBase
         {
             // Hata durumlarını uygun şekilde işleyin
             return StatusCode(500, "Döviz kuru verileri alınamadı.");
+        }
+    }
+
+    [HttpGet("allCurrency")]
+    public IActionResult GetAllCurrencies()
+    {
+        var client = new RestClient("https://api.collectapi.com/economy/allCurrency");
+        var request = new RestRequest();
+        request.AddHeader("authorization", "apikey 3hRPpifkKwiSm7hwI2vODH:5PmwOCIoBlPrntlXrYfUot");
+        request.AddHeader("content-type", "application/json");
+        
+        RestResponse response = client.Execute(request);
+
+        if (response.IsSuccessful)
+        {
+            return Ok(response.Content);
+        }
+        else
+        {
+            return StatusCode(500, "Veriler alınamadı.");
         }
     }
 }
