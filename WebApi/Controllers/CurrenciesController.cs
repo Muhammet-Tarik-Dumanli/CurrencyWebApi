@@ -50,7 +50,6 @@ public class CurrenciesController : ControllerBase
         }
         else
         {
-            // Hata durumlarını uygun şekilde işleyin
             return StatusCode(500, "Döviz kuru verileri alınamadı.");
         }
     }

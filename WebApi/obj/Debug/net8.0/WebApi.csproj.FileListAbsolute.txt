@@ -7,6 +7,8 @@ D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\WebApi.dll
 D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\WebApi.pdb
 D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\RestSharp.dll
 D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -17,6 +19,7 @@ D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfo.cs
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.csproj.CoreCompileInputs.cache
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\staticwebassets.build.json
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\staticwebassets.development.json
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\staticwebassets\msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
@@ -31,6 +34,3 @@ D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\refint\WebApi.dll
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.pdb
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\ref\WebApi.dll
-D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\RestSharp.dll
-D:\Pratikler\CurrencyWebApi\WebApi\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\Pratikler\CurrencyWebApi\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
