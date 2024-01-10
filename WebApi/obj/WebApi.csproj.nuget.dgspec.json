@@ -1,42 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pratikler\\CurrencyWebApi\\WebApi\\WebApi.csproj": {}
+    "C:\\Patika-Akbank_BootCamp\\Week3\\CurrencyWebApi\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Pratikler\\CurrencyWebApi\\WebApi\\WebApi.csproj": {
+    "C:\\Patika-Akbank_BootCamp\\Week3\\CurrencyWebApi\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pratikler\\CurrencyWebApi\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Patika-Akbank_BootCamp\\Week3\\CurrencyWebApi\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\Pratikler\\CurrencyWebApi\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\mtarik.dumanli\\.nuget\\packages\\",
-        "outputPath": "D:\\Pratikler\\CurrencyWebApi\\WebApi\\obj\\",
+        "projectPath": "C:\\Patika-Akbank_BootCamp\\Week3\\CurrencyWebApi\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\MUHAMMET\\.nuget\\packages\\",
+        "outputPath": "C:\\Patika-Akbank_BootCamp\\Week3\\CurrencyWebApi\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
-          "D:\\Provision\\Lib\\DevExpress_23_2\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mtarik.dumanli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\MUHAMMET\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Provision\\Lib\\DevExpress_23_2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -47,12 +37,12 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[7.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -86,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
