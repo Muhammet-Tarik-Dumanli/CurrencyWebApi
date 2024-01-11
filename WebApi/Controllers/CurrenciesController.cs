@@ -1,31 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RestSharp;
 using WebApi.ApplicationConfig;
+using WebApi.Services;
 
 [ApiController]
 [Route("[controller]")]
 public class CurrenciesController : ControllerBase
 {
     private readonly RestClient _restClient;
-
-    public CurrenciesController()
+    private readonly ICurrencyService _currencyService;
+    public CurrenciesController(ICurrencyService currencyService)
     {
         _restClient = new RestClient();
+        _currencyService = currencyService;
     }
 
     [HttpGet("exchange")]
-    public IActionResult GetExchangeRate(string baseCurrency = "USD", string targetCurrency = "EUR")
+    public IActionResult GetExchangeRate(string baseCurrency = "USD", string targetCurrency = "TRY")
     {
-        var client = new RestClient($"{Config.BaseUrl}/exchange?int=10&to={targetCurrency}&base={baseCurrency}");
-        var request = new RestRequest();
-        request.AddHeader("authorization", $"apikey {Config.APIKEY}");
-        request.AddHeader("content-type", "application/json");
-        
-        RestResponse response = client.Execute(request);
+        var result = _currencyService.GetExchangeRate(baseCurrency, targetCurrency);
 
-        if (response.IsSuccessful)
+        if (result != null)
         {
-            return Ok(response.Content);
+            return Ok(result);
         }
         else
         {
@@ -36,17 +34,11 @@ public class CurrenciesController : ControllerBase
     [HttpGet]
     public IActionResult GetLatestExchangeRates(string baseCurrency = "USD")
     {
-        var client = new RestClient($"{Config.BaseUrl}/currencyToAll?int=10&base=USD");
-        var request = new RestRequest();
-        request.AddHeader("authorization", $"apikey {Config.APIKEY}");
-        request.AddHeader("content-type", "application/json");
-        request.AddParameter("int", "10");
+        var result = _currencyService.GetLatestExchangeRates(baseCurrency);
 
-        RestResponse response = client.Execute(request);
-
-        if (response.IsSuccessful)
+        if (result != null)
         {
-            return Ok(response.Content); // Alınan veriyi JSON olarak döndür
+            return Ok(result);
         }
         else
         {
@@ -57,20 +49,31 @@ public class CurrenciesController : ControllerBase
     [HttpGet("allCurrency")]
     public IActionResult GetAllCurrencies()
     {
-        var client = new RestClient($"{Config.BaseUrl}/allCurrency");
-        var request = new RestRequest();
-        request.AddHeader("authorization", $"apikey {Config.APIKEY}");
-        request.AddHeader("content-type", "application/json");
-        
-        RestResponse response = client.Execute(request);
+        var result = _currencyService.GetLatestExchangeRates();
 
-        if (response.IsSuccessful)
+        if (result != null)
         {
-            return Ok(response.Content);
+            return Ok(result);
         }
         else
         {
             return StatusCode(500, "Döviz kuru verileri alınamadı.");
         }
     }
+
+    [HttpGet("singleCurrency")]
+    public IActionResult GetSingleCurrency(string baseCurrency = "USD")
+    {
+        var result = _currencyService.GetLatestExchangeRates(baseCurrency);
+
+        if (result != null)
+        {
+            return Ok(result);
+        }
+        else
+        {
+            return StatusCode(500, "Döviz kuru verileri alınamadı.");
+        }
+    }
+
 }
